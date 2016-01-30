@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ee9e9e">
+
+    <android.support.v4.view.ViewPager
+        android:background="@android:color/background_light"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        tools:context="com.parse.starter.Home" />
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#ee9e9e"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:src="@drawable/ic_camera_enhance_black_48dp"
+        android:onClick="onClick"/>
+</LinearLayout>
+
+
+<!-- From: file:/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/res/layout/activity_home.xml -->

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v13/23.0.1/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8c046c952177602c858ed41c8fc492c939bde9aa">
+        <dex dex="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-b139b90109fde518e1f2ef165a01ef9be3c2a3df.jar" />
+    </item>
+    <item
+        jar="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v13/23.0.1/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a0c456a59e1edab84702b48a626705aa1d830ccc">
+        <dex dex="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-cc7d8482317587da90eae7decb74746c551cdbf8.jar" />
+    </item>
+    <item
+        jar="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-07f8dd5bfd5d1fce4630529813576f73e71294e1.jar" />
+    </item>
+    <item
+        jar="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-2b79cc1d040ddbd428606a9987e1a7b91800577d.jar" />
+    </item>
+    <item
+        jar="/opt/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-cfadd2d00992f445c24a2740af1f818d70a64eeb.jar" />
+    </item>
+    <item
+        jar="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/libs/Parse-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="fe739334780fe321141e62720822c2d456061899">
+        <dex dex="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/pre-dexed/debug/Parse-1.9.2-7f49e3af278242f9c0273e0d9002b6b8121891dd.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-82e7c0fc75e5c03712beb01b3317fbdb847c930e.jar" />
+    </item>
+    <item
+        jar="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/libs/ParseCrashReporting-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="83f3b1e397f1cc3f05cb9db078d9e364b5f5e218">
+        <dex dex="/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.9.2-5229e90a1f272c7972ca94288735c2a15b93dc49.jar" />
+    </item>
+
+</items>

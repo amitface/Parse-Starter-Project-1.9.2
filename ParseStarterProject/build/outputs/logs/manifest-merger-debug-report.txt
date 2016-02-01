@@ -15,8 +15,9 @@ ADDED from AndroidManifest.xml:2:1
 		INJECTED from AndroidManifest.xml:0:0
 uses-sdk
 ADDED from AndroidManifest.xml:8:5
-MERGED from com.android.support:support-v13:23.0.1:20:5
-MERGED from com.android.support:support-v4:23.0.1:20:5
+MERGED from com.android.support:support-v13:23.1.1:20:5
+MERGED from com.android.support:support-v4:23.1.1:20:5
+MERGED from com.android.support:support-v4:23.1.1:20:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
@@ -62,8 +63,6 @@ ADDED from AndroidManifest.xml:27:5
 		ADDED from AndroidManifest.xml:27:22
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from AndroidManifest.xml:28:5
-	android:maxSdkVersion
-		ADDED from AndroidManifest.xml:30:9
 	android:name
 		ADDED from AndroidManifest.xml:29:9
 uses-permission#android.permission.READ_PHONE_STATE
@@ -72,8 +71,6 @@ ADDED from AndroidManifest.xml:32:5
 		ADDED from AndroidManifest.xml:32:22
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from AndroidManifest.xml:33:5
-	android:maxSdkVersion
-		ADDED from AndroidManifest.xml:35:9
 	android:name
 		ADDED from AndroidManifest.xml:34:9
 uses-feature#android.hardware.camera
@@ -84,8 +81,9 @@ ADDED from AndroidManifest.xml:36:5
 		ADDED from AndroidManifest.xml:36:19
 application
 ADDED from AndroidManifest.xml:40:5
-MERGED from com.android.support:support-v13:23.0.1:22:5
-MERGED from com.android.support:support-v4:23.0.1:22:5
+MERGED from com.android.support:support-v13:23.1.1:22:5
+MERGED from com.android.support:support-v4:23.1.1:22:5
+MERGED from com.android.support:support-v4:23.1.1:22:5
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:45:9
 	android:label

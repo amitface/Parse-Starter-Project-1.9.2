@@ -110,7 +110,7 @@ public class Register extends Activity implements View.OnClickListener{
         final Intent intentRegister = new Intent(this, UserDetails.class);
 
         ParseObject userDetails= new ParseObject("UserDetails");
-        userDetails.put("userId", ParseUser.getCurrentUser().getObjectId().toString());
+        userDetails.put("userId", ParseUser.getCurrentUser().getUsername().toString());
         userDetails.put("descripiton","Hello world");
 
         ByteArrayOutputStream stream = new ByteArrayOutputStream();

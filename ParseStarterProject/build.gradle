@@ -15,7 +15,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: 'Parse-*.jar')
     compile fileTree(dir: 'libs', include: 'ParseCrashReporting-*.jar')
     compile 'com.parse.bolts:bolts-android:1.2.0'
-    compile 'com.android.support:support-v13:23.0.1'
+    compile 'com.android.support:support-v13:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
 }
 
 android {

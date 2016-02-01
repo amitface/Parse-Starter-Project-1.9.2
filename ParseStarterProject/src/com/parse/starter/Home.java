@@ -5,9 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 import android.annotation.TargetApi;
@@ -17,12 +14,9 @@ import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
 import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,22 +27,17 @@ import android.provider.MediaStore;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.Gravity;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import com.parse.ParseFile;
 import com.parse.ParseObject;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
@@ -109,7 +98,6 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
         // When swiping between different sections, select the corresponding
         // tab. We can also use ActionBar.Tab#select() to do this if we have
         // a reference to the Tab.
@@ -221,7 +209,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
             switch (position)
             {
                 case 0: return UserHome.newInstance(position+1);
-//                case 1: return
+                case 1: return SearchList.newInstance(position + 1);
                 case 2:return Profile.newInstance(position+1);
                 default:return PlaceholderFragment.newInstance(position + 1);
         }
@@ -349,7 +337,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
 
                 File destination = new File(Environment.getExternalStorageDirectory(),imgName);
                 byte[] image = bytes.toByteArray();
-
+               String encodeImg= Base64.encodeToString(image,Base64.DEFAULT);
                 // Create the ParseFile
                 ParseFile file = new ParseFile( imgName, image);
 
@@ -363,7 +351,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
 
                     }
                 });
-
+                query.put("picString",encodeImg);
                 query.put("pic", file);
                 query.put("userId", currentUser.getUsername().toString());
 
@@ -407,6 +395,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
 
 
                 byte[] image = bytes.toByteArray();
+                String encodeImg= Base64.encodeToString(image, Base64.DEFAULT);
                 // Create the ParseFile
                 ParseFile file = new ParseFile(imgName , image);
 
@@ -420,7 +409,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
 
                     }
                 });
-
+                query.put("picString", encodeImg);
                 query.put("pic", file);
                 query.put("userId", currentUser.getUsername().toString());
                  ivImage.setImageBitmap(bm);

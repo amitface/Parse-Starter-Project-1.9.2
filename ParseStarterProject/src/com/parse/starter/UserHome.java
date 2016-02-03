@@ -42,14 +42,15 @@ public class UserHome extends ListFragment {
 
     private static ParseUser currentUser = ParseUser.getCurrentUser();
      List<RowItem> rowItems = new ArrayList<RowItem>();
-        List<String> test=null;
+    List<String> test=null;
     CustomAdapter ad=null;
+
     public static UserHome newInstance(int sectionNumber) {
         UserHome fragment = new UserHome();
         Bundle args = new Bundle();
         args.putInt("1", sectionNumber);
 
-        args.putStringArrayList("list", (ArrayList<String>) data());
+//        args.putStringArrayList("list", (ArrayList<String>) data());
         fragment.setArguments(args);
         return fragment;
     }
@@ -63,6 +64,16 @@ public class UserHome extends ListFragment {
                              Bundle savedInstanceState) {
         super.onCreateView(inflater,container,savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_userhome, container, false);
+        find();
+
+        return rootView;
+    }
+
+
+
+
+    private void find()
+    {
 
         final List<String> test = new ArrayList<String>();
         final List<String> userKey=new ArrayList<String>();
@@ -92,46 +103,35 @@ public class UserHome extends ListFragment {
                 ad.notifyDataSetChanged();
             }
         });
-//        test=new ArrayList<String>();
-//        test.addAll((List<String>)getArguments().getStringArrayList("list"));
-//        ad=new CustomAdapter(getActivity(),test);
-//        setListAdapter(ad);
-//        ad.notifyDataSetChanged();
-//        CustomAdapterUserHome adapter = new CustomAdapterUserHome(getActivity(),R.layout.list_item, rowItems);
-//        adapter.notifyDataSetChanged();
-//        setListAdapter(adapter);
-        return rootView;
     }
-
-    public static  List<String> data()
-    {
-        final List<String> test = new ArrayList<String>();
-        final List<String> userKey=new ArrayList<String>();
-        userKey.add("following");
-
-        final List<String> filter=new ArrayList<String>();
-        filter.add("userId");
-        filter.add("createdAt");
-        filter.add("pic");
-        filter.add("picString");
-
-        ParseQuery<ParseObject> friends= ParseQuery.getQuery("Friends");
-        final ParseQuery<ParseObject> pics =ParseQuery.getQuery("photo");
-        pics.addDescendingOrder("createdAt");
-        friends.whereEqualTo("userId", currentUser.getUsername().toString());
-        friends.selectKeys(userKey);
-
-        friends.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> list, ParseException e) {
-
-                for (ParseObject p : list) {
-                    test.add(p.getString("following"));
-                }
-            }
-        });
-        return test;
-    }
-
-
 }
+
+//    public static  List<String> data()
+//    {
+//        final List<String> test = new ArrayList<String>();
+//        final List<String> userKey=new ArrayList<String>();
+//        userKey.add("following");
+//
+//        final List<String> filter=new ArrayList<String>();
+//        filter.add("userId");
+//        filter.add("createdAt");
+//        filter.add("pic");
+//        filter.add("picString");
+//
+//        ParseQuery<ParseObject> friends= ParseQuery.getQuery("Friends");
+//        final ParseQuery<ParseObject> pics =ParseQuery.getQuery("photo");
+//        pics.addDescendingOrder("createdAt");
+//        friends.whereEqualTo("userId", currentUser.getUsername().toString());
+//        friends.selectKeys(userKey);
+//
+//        friends.findInBackground(new FindCallback<ParseObject>() {
+//            @Override
+//            public void done(List<ParseObject> list, ParseException e) {
+//
+//                for (ParseObject p : list) {
+//                    test.add(p.getString("following"));
+//                }
+//            }
+//        });
+//        return test;
+//    }

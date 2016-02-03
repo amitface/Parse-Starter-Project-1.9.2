@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ee9e9e">
+    android:background="#e8dcdc">
 
     <android.support.v4.view.ViewPager
         android:background="@android:color/background_light"
@@ -16,7 +16,7 @@
         android:id="@+id/camera"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:background="#ee9e9e"
+        android:background="#e8dbdb"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:src="@drawable/ic_camera_enhance_black_48dp"

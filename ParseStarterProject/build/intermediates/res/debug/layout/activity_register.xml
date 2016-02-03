@@ -15,13 +15,12 @@
         android:text="@string/username" />
     <EditText
         android:id="@+id/username"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:hint="name"
 
-        android:layout_above="@+id/pass"
-        android:layout_alignLeft="@+id/password"
-        android:layout_alignStart="@+id/password" />
+        android:layout_alignTop="@+id/name"
+        android:layout_centerHorizontal="true" />
     <TextView
         android:id="@+id/pass"
         android:layout_width="140dp"
@@ -31,14 +30,13 @@
         android:layout_below="@+id/name"/>
     <EditText
         android:id="@+id/password"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:hint="password"
         android:password="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="2dp"
-        android:layout_below="@+id/username"
-        android:layout_toRightOf="@+id/pass"/>
+        android:layout_above="@+id/emailtext"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignStart="@+id/username" />
     <TextView
         android:id="@+id/emailtext"
         android:layout_width="140dp"
@@ -48,14 +46,13 @@
         android:layout_below="@+id/pass"/>
     <EditText
         android:id="@+id/email"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="Email"
         android:padding="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="2dp"
-        android:layout_below="@+id/pass"
-        android:layout_toRightOf="@+id/emailtext"/>
+        android:layout_alignTop="@+id/emailtext"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password" />
 
     <Button
         android:layout_width="wrap_content"

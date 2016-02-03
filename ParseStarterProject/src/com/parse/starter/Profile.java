@@ -3,11 +3,13 @@ package com.parse.starter;
 import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +52,8 @@ public class Profile extends Fragment implements View.OnClickListener{
     //
     Bitmap bitmap=null;
 
+    private LruCache<String, Bitmap> mMemoryCache;
+
     public static Profile newInstance(int sectionNumber) {
 
         Profile fragment = new Profile();
@@ -58,6 +62,41 @@ public class Profile extends Fragment implements View.OnClickListener{
         fragment.setArguments(args);
         return fragment;
     }
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        // Get max available VM memory, exceeding this amount will throw an
+        // OutOfMemory exception. Stored in kilobytes as LruCache takes an
+        // int in its constructor.
+        final int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
+
+        // Use 1/8th of the available memory for this memory cache.
+        final int cacheSize = maxMemory / 8;
+
+//        mMemoryCache = new LruCache<String, Bitmap>(cacheSize) {
+//            @Override
+//            protected int sizeOf(String key, Bitmap bitmap) {
+//                // The cache size will be measured in kilobytes rather than
+//                // number of items.
+//                return bitmap.getByteCount() / 1024;
+//            }
+//        };
+
+    }
+
+//    public void addBitmapToMemoryCache(String key, Bitmap bitmap) {
+//        if (getBitmapFromMemCache(key) == null) {
+//            mMemoryCache.put(key, bitmap);
+//        }
+//    }
+//
+//    public Bitmap getBitmapFromMemCache(String key) {
+//        return mMemoryCache.get(key);
+//    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,7 +108,7 @@ public class Profile extends Fragment implements View.OnClickListener{
         descriptiontxt=(TextView)rootView.findViewById(R.id.descriptiontxt);
         mImageView=(ImageView)rootView.findViewById(R.id.imageView_round);
 
-
+        descriptiontxt.setText(currentUser.getUsername().toString());
         //get objectId
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserDetails");
         query.whereEqualTo("userId", currentUser.getUsername().toString());
@@ -79,8 +118,9 @@ public class Profile extends Fragment implements View.OnClickListener{
             public void done(ParseObject parseObject, com.parse.ParseException e) {
                 if (e == null) {
                     userDetail = (ParseObject) parseObject;
-                    //Log.d("score", "Retrieved " + list.get(0).getObjectId() + " scores");
-                    descriptiontxt.setText(parseObject.getString("description"));
+
+
+
 
                     ParseFile profilePhoto = (ParseFile) parseObject.get("profilephoto");
                     profilePhoto.getDataInBackground(new GetDataCallback() {
@@ -88,11 +128,8 @@ public class Profile extends Fragment implements View.OnClickListener{
                         public void done(byte[] bytes, com.parse.ParseException e) {
                             if (e == null) {
                                 // data has the bytes for the resume
-                                Bitmap bmp = BitmapFactory
-                                        .decodeByteArray(
-                                                bytes, 0,
-                                                bytes.length);
-                                mImageView.setImageBitmap(bmp);
+
+                                mImageView.setImageBitmap(decodeSampledBitmapFromResource(bytes,70, 70));
                             } else {
                                 // something went wrong
                             }
@@ -134,5 +171,60 @@ public class Profile extends Fragment implements View.OnClickListener{
             default:
                 break;
         }
+    }
+
+//    public void loadBitmap(int resId, ImageView imageView) {
+//        final String imageKey = String.valueOf(resId);
+//
+//        final Bitmap bitmap = getBitmapFromMemCache(imageKey);
+//        if (bitmap != null) {
+//            mImageView.setImageBitmap(bitmap);
+//        } else {
+//            mImageView.setImageResource(R.drawable.image_placeholder);
+//            BitmapWorkerTask task = new BitmapWorkerTask(mImageView);
+//            task.execute(resId);
+//        }
+//    }
+
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) > reqHeight
+                    && (halfWidth / inSampleSize) > reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
+    }
+
+    public static Bitmap decodeSampledBitmapFromResource(byte[] bytes,
+                                                         int reqWidth, int reqHeight) {
+
+        // First decode with inJustDecodeBounds=true to check dimensions
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        Bitmap bmp = BitmapFactory
+                .decodeByteArray(
+                        bytes, 0,
+                        bytes.length,options);
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length,options);
     }
 }

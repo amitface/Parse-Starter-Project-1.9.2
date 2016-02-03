@@ -6,56 +6,62 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.parse.starter.Profile">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout">
     <com.parse.starter.OvalImageView
         android:id="@+id/imageView_round"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@drawable/ic_launcher"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:onClick="onClick"/>
-    <TextView
+
+
+    </FrameLayout>
+
+    <GridLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:id="@+id/gridLayout"></GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/descriptiontxt"
-        android:layout_margin="10dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editButton"/>
-
-
+        android:text="edit your profile"
+        android:id="@+id/editButton"
+        android:onClick="onClick"
+        android:textSize="12sp"
+        android:layout_below="@+id/frameLayout"
+        android:layout_toLeftOf="@+id/textView5"
+        android:layout_toStartOf="@+id/textView5" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="15"
-        android:id="@+id/textView"
+        android:text="followers"
+        android:id="@+id/textView5"
+        android:layout_gravity="right|top"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/imageView_round"
-        android:layout_toRightOf="@+id/imageView_round"
-        />
-
+        android:layout_alignRight="@+id/gridLayout"
+        android:layout_alignEnd="@+id/gridLayout" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="70"
-        android:id="@+id/textView2"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="500"
-        android:id="@+id/textView3"
-        android:layout_above="@+id/textView5"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="following"
+    android:id="@+id/textView6"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/textView5"
+        android:layout_toStartOf="@+id/textView5"
         android:layout_marginRight="38dp"
         android:layout_marginEnd="38dp" />
 
@@ -65,45 +71,49 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="posts"
         android:id="@+id/textView4"
-        android:layout_below="@+id/textView"
-        android:layout_centerInParent="true"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/editButton"
+        android:layout_toStartOf="@+id/editButton" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="followers"
-        android:id="@+id/textView5"
-        android:layout_marginLeft="55px"
-        android:layout_alignTop="@+id/textView4"
-        android:layout_toRightOf="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_toLeftOf="@+id/textView6"
-        android:layout_toStartOf="@+id/textView6" />
+        android:text="500"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/gridLayout"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="following"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:text="70"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/frameLayout"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="edit your profile"
-        android:id="@+id/editButton"
-        android:onClick="onClick"
-        android:textSize="12sp"
-        android:layout_below="@+id/textView5"
-        android:layout_toLeftOf="@+id/textView6"
-        android:layout_toStartOf="@+id/textView6"
-        android:layout_marginTop="25dp" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="15"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptiontxt"
+        android:layout_alignBaseline="@+id/editButton"
+        android:layout_alignBottom="@+id/editButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
 
 <!-- From: file:/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/res/layout/fragment_profile.xml -->

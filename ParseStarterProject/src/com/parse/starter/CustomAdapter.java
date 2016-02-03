@@ -11,6 +11,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -23,7 +24,13 @@ public class CustomAdapter extends ParseQueryAdapter<ParseObject> {
 			public ParseQuery create() {
 				ParseQuery query = new ParseQuery("photo");
 				query.whereContainedIn("userId",rt);
+				query.addDescendingOrder("createdAt");
 				//query.whereEqualTo("highPri", true);
+				final List<String> filter=new ArrayList<String>();
+				filter.add("userId");
+				filter.add("createdAt");
+				filter.add("pic");
+				query.selectKeys(filter);
 				return query;
 			}
 		});

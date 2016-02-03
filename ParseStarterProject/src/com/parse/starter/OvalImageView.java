@@ -46,34 +46,61 @@ public class OvalImageView extends ImageView {
 
     }
 
-    public static Bitmap getOvalCroppedBitmap(Bitmap bitmap, int radius) {
-        Bitmap finalBitmap;
-        if (bitmap.getWidth() != radius || bitmap.getHeight() != radius)
-            finalBitmap = Bitmap.createScaledBitmap(bitmap, radius, radius,
-                    false);
+//    public static Bitmap getOvalCroppedBitmap(Bitmap bitmap, int radius) {
+//        Bitmap finalBitmap;
+//        if (bitmap.getWidth() != radius || bitmap.getHeight() != radius)
+//            finalBitmap = Bitmap.createScaledBitmap(bitmap, radius, radius,
+//                    false);
+//        else
+//            finalBitmap = bitmap;
+//        Bitmap output = Bitmap.createBitmap(finalBitmap.getWidth(),
+//                finalBitmap.getHeight(), Config.ARGB_8888);
+//        Canvas canvas = new Canvas(output);
+//
+//        Paint paint = new Paint();
+//        final Rect rect = new Rect(0, 0, finalBitmap.getWidth(),
+//                finalBitmap.getHeight());
+//
+//        paint.setAntiAlias(true);
+//        paint.setFilterBitmap(true);
+//        paint.setDither(true);
+//        canvas.drawARGB(0, 0, 0, 0);
+//        paint.setColor(Color.parseColor("#BAB399"));
+//        RectF oval = new RectF(0, 0, 130, 150);
+//        canvas.drawOval(oval, paint);
+//        paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+//        canvas.drawBitmap(finalBitmap, rect, oval, paint);
+//
+//        return output;
+//    }
+
+    public static Bitmap getOvalCroppedBitmap(Bitmap bmp, int radius) {
+        Bitmap sbmp;
+        if(bmp.getWidth() != radius || bmp.getHeight() != radius)
+            sbmp = Bitmap.createScaledBitmap(bmp, radius, radius, false);
         else
-            finalBitmap = bitmap;
-        Bitmap output = Bitmap.createBitmap(finalBitmap.getWidth(),
-                finalBitmap.getHeight(), Config.ARGB_8888);
+            sbmp = bmp;
+        Bitmap output = Bitmap.createBitmap(sbmp.getWidth(),
+                sbmp.getHeight(), Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
 
-        Paint paint = new Paint();
-        final Rect rect = new Rect(0, 0, finalBitmap.getWidth(),
-                finalBitmap.getHeight());
+        final int color = 0xffa19774;
+        final Paint paint = new Paint();
+        final Rect rect = new Rect(0, 0, sbmp.getWidth(), sbmp.getHeight());
 
         paint.setAntiAlias(true);
         paint.setFilterBitmap(true);
         paint.setDither(true);
         canvas.drawARGB(0, 0, 0, 0);
         paint.setColor(Color.parseColor("#BAB399"));
-        RectF oval = new RectF(0, 0, 130, 150);
-        canvas.drawOval(oval, paint);
+        canvas.drawCircle(sbmp.getWidth() / 2+0.7f, sbmp.getHeight() / 2+0.7f,
+                sbmp.getWidth() / 2+0.1f, paint);
         paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
-        canvas.drawBitmap(finalBitmap, rect, oval, paint);
+        canvas.drawBitmap(sbmp, rect, rect, paint);
+
 
         return output;
     }
-
 }
 
 

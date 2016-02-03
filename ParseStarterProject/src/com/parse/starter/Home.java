@@ -98,6 +98,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setOffscreenPageLimit(2);
         // When swiping between different sections, select the corresponding
         // tab. We can also use ActionBar.Tab#select() to do this if we have
         // a reference to the Tab.
@@ -351,7 +352,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
 
                     }
                 });
-                query.put("picString",encodeImg);
+//                query.put("picString",encodeImg);
                 query.put("pic", file);
                 query.put("userId", currentUser.getUsername().toString());
 
@@ -380,7 +381,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inJustDecodeBounds = true;
                 BitmapFactory.decodeFile(selectedImagePath, options);
-                final int REQUIRED_SIZE = 200;
+                final int REQUIRED_SIZE = 350;
                 int scale = 1;
                 while (options.outWidth / scale / 2 >= REQUIRED_SIZE
                         && options.outHeight / scale / 2 >= REQUIRED_SIZE)
@@ -409,10 +410,10 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
 
                     }
                 });
-                query.put("picString", encodeImg);
+//                query.put("picString", encodeImg);
                 query.put("pic", file);
                 query.put("userId", currentUser.getUsername().toString());
-                 ivImage.setImageBitmap(bm);
+//                 ivImage.setImageBitmap(bm);
             }
 
         }
@@ -424,7 +425,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
                     Toast.makeText(getApplicationContext(),"done",Toast.LENGTH_LONG).show();
                 }
                 else
-                    Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Error"+e.getCause().toString(),Toast.LENGTH_LONG).show();
 
             }
         });

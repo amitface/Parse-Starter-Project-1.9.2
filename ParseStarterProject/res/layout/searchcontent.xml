@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:layout_margin="5dp">
+
+
+
+    <com.parse.starter.ParseOvalImageView
+        android:id="@+id/imageView_round"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/solid"
+        android:onClick="onClick"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+         />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imageView_round"
+        android:textColor="#FF0000" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="following"
+        android:id="@+id/button"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp" />
+</RelativeLayout>

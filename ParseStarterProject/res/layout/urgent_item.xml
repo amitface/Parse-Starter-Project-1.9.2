@@ -7,35 +7,63 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:textSize="15dp"
         android:textColor="#6f00ff" />
-    <com.parse.ParseImageView
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:padding="10dp"/>
+    <FrameLayout
+        android:id="@+id/fm"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/name"
+        android:layout_height="300dp">
+        <com.parse.ParseImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxHeight="100dp"
-        android:layout_below="@+id/name"
+        android:layout_height="match_parent"
 
-        android:padding="10dp"
+        android:layout_marginTop="5dp"
+         />
+
+    </FrameLayout>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageButton"
+        android:background="@drawable/index"
+        android:layout_below="@+id/fm"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dip"
-        android:layout_marginRight="15dip" />
 
+        android:layout_centerHorizontal="true"
+       />
 
     <TextView
-    android:id="@+id/timestamp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/img"
-    android:layout_margin="5dp"
-        android:padding="10dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating"
+        android:text="0.0"
+        android:textSize="35dp"
+        android:textColor="#e86b2c13"
+        android:layout_marginTop="30dp"
+
+        android:layout_below="@+id/fm"
+
+        android:layout_toEndOf="@+id/imageButton"/>
+
 
 
 
 </RelativeLayout>
 
+    <!--android:layout_toEndOf="@+id/imageButton"-->
+    <!--android:layout_toRightOf="@+id/imageButton"-->
 <!--<com.parse.ParseImageView-->
 <!--android:id="@+id/img"-->
 <!--android:layout_width="match_parent"-->

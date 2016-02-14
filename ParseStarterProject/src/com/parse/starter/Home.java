@@ -38,6 +38,7 @@ import android.widget.Toast;
 
 import com.parse.ParseFile;
 import com.parse.ParseObject;
+import com.parse.ParseSession;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
@@ -138,7 +139,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
             //Toast.makeText(getApplication(),"restart",Toast.LENGTH_SHORT).show();
         } else {
             // show the signup or login screen
-            Toast.makeText(this,"restart Home",Toast.LENGTH_LONG).show();
+//            Toast.makeText(this,"restart Home",Toast.LENGTH_LONG).show();
             Intent intent =new Intent(getApplicationContext(),Login.class);
             startActivity(intent);
         }
@@ -165,6 +166,7 @@ public class Home extends Activity implements ActionBar.TabListener ,View.OnClic
         if(id== R.id.action_logout)
         {
             ParseUser.logOut();
+
            currentUser= ParseUser.getCurrentUser();
      //       Toast.makeText(this,currentUser.getObjectId().toString(),Toast.LENGTH_LONG).show();
             if(currentUser==null) {

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -21,6 +22,8 @@ import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseQueryAdapter;
+import com.parse.ParseRelation;
 import com.parse.ParseUser;
 
 import java.net.URL;
@@ -62,9 +65,10 @@ public class UserHome extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        super.onCreateView(inflater,container,savedInstanceState);
+        super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_userhome, container, false);
         find();
+//        TextView rating = (TextView)rootView.findViewById(R.id.rating);
 
         return rootView;
     }
@@ -86,8 +90,8 @@ public class UserHome extends ListFragment {
         filter.add("picString");
 
         ParseQuery<ParseObject> friends= ParseQuery.getQuery("Friends");
-        final ParseQuery<ParseObject> pics =ParseQuery.getQuery("photo");
-        pics.addDescendingOrder("createdAt");
+//        final ParseQuery<ParseObject> pics =ParseQuery.getQuery("photo");
+//        pics.addDescendingOrder("createdAt");
         friends.whereEqualTo("userId", currentUser.getUsername().toString());
         friends.selectKeys(userKey);
 
@@ -98,40 +102,12 @@ public class UserHome extends ListFragment {
                 for (ParseObject p : list) {
                     test.add(p.getString("following"));
                 }
+
                 ad=new CustomAdapter(getActivity(),test);
                 setListAdapter(ad);
                 ad.notifyDataSetChanged();
             }
         });
+
     }
 }
-
-//    public static  List<String> data()
-//    {
-//        final List<String> test = new ArrayList<String>();
-//        final List<String> userKey=new ArrayList<String>();
-//        userKey.add("following");
-//
-//        final List<String> filter=new ArrayList<String>();
-//        filter.add("userId");
-//        filter.add("createdAt");
-//        filter.add("pic");
-//        filter.add("picString");
-//
-//        ParseQuery<ParseObject> friends= ParseQuery.getQuery("Friends");
-//        final ParseQuery<ParseObject> pics =ParseQuery.getQuery("photo");
-//        pics.addDescendingOrder("createdAt");
-//        friends.whereEqualTo("userId", currentUser.getUsername().toString());
-//        friends.selectKeys(userKey);
-//
-//        friends.findInBackground(new FindCallback<ParseObject>() {
-//            @Override
-//            public void done(List<ParseObject> list, ParseException e) {
-//
-//                for (ParseObject p : list) {
-//                    test.add(p.getString("following"));
-//                }
-//            }
-//        });
-//        return test;
-//    }

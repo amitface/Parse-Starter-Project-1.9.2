@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/frameLayout">
-    <com.parse.starter.OvalImageView
+    <ImageView
         android:id="@+id/imageView_round"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -116,3 +116,12 @@
 
 </RelativeLayout>
 
+<!--<com.parse.starter.OvalImageView-->
+<!--android:id="@+id/imageView_round"-->
+<!--android:layout_width="70dp"-->
+<!--android:layout_height="70dp"-->
+<!--android:src="@drawable/ic_launcher"-->
+<!--android:layout_alignParentTop="true"-->
+<!--android:layout_alignParentStart="true"-->
+<!--android:layout_alignParentLeft="true"-->
+<!--android:onClick="onClick"/>-->

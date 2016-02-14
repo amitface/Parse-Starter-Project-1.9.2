@@ -100,7 +100,7 @@ public class Profile extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
         Button editButton=(Button)rootView.findViewById(R.id.editButton);
         editButton.setOnClickListener(this);
@@ -128,8 +128,8 @@ public class Profile extends Fragment implements View.OnClickListener{
                         public void done(byte[] bytes, com.parse.ParseException e) {
                             if (e == null) {
                                 // data has the bytes for the resume
-
-                                mImageView.setImageBitmap(decodeSampledBitmapFromResource(bytes,70, 70));
+                                RoundImage roundImage= new RoundImage(decodeSampledBitmapFromResource(bytes, 70, 70));
+                                mImageView.setImageDrawable(roundImage);
                             } else {
                                 // something went wrong
                             }

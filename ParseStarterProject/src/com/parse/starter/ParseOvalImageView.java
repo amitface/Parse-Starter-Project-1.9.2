@@ -44,7 +44,9 @@ public class ParseOvalImageView extends ParseImageView {
 
         int w = getWidth(), h = getHeight();
         Bitmap roundBitmap = getOvalCroppedBitmap(bitmap, w);
+
         canvas.drawBitmap(roundBitmap, 0, 0, null);
+
 
     }
 
@@ -73,7 +75,7 @@ public class ParseOvalImageView extends ParseImageView {
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(finalBitmap, rect, oval, paint);
 
-        return output;
+        return  output;
     }
 
 }

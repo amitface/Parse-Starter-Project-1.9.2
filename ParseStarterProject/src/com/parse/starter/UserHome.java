@@ -105,6 +105,7 @@ public class UserHome extends ListFragment {
 
                 ad=new CustomAdapter(getActivity(),test);
                 setListAdapter(ad);
+
                 ad.notifyDataSetChanged();
             }
         });

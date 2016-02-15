@@ -49,8 +49,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/rating"
         android:text="0.0"
-        android:textSize="35dp"
-        android:textColor="#e86b2c13"
+        android:textSize="35sp"
+        android:textColor="#6f00ff"
         android:layout_marginTop="30dp"
 
         android:layout_below="@+id/fm"

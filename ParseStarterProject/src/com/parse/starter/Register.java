@@ -1,9 +1,13 @@
 package com.parse.starter;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.ParseException;
 import android.os.Bundle;
 import android.util.EventLogTags;
@@ -26,6 +30,8 @@ import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
 import java.io.ByteArrayOutputStream;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class Register extends Activity implements View.OnClickListener{
@@ -36,7 +42,10 @@ public class Register extends Activity implements View.OnClickListener{
     EditText password;
     EditText username;
     EditText email;
-    ParseUser user = new ParseUser();
+    ParseUser user ;
+    Pattern pattern = Pattern.compile("\\s");
+
+//    boolean found = matcher.find();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +61,7 @@ public class Register extends Activity implements View.OnClickListener{
         switch (view.getId())
         {
             case R.id.submit:
-//                Toast.makeText(getApplicationContext(),
-//                            "submit clicked",
-//                            Toast.LENGTH_LONG).show();
+
                 // Retrieve the text entered from the EditText
                 username = (EditText) findViewById(R.id.username);
                 password = (EditText) findViewById(R.id.password);
@@ -62,40 +69,77 @@ public class Register extends Activity implements View.OnClickListener{
                      usernametxt = username.getText().toString();
                      passwordtxt = password.getText().toString();
                      emailtxt=email.getText().toString();
+                Matcher matcher = pattern.matcher(emailtxt);
                 // Force user to fill up the form
-                if (usernametxt.equals("") && passwordtxt.equals("")) {
+                if (usernametxt.equals("") || passwordtxt.equals("")) {
                     Toast.makeText(getApplicationContext(),
                             "Please complete the sign up form",
                             Toast.LENGTH_LONG).show();
 
-                } else {
+                }
+                else if(matcher.find())
+                {
+                    Toast.makeText(getApplication(),"Space not allowed in email",Toast.LENGTH_LONG).show();
+                }
+                 else
+                 {
                  //    Save new user data into Parse.com Data Storage
-
+                    user=new ParseUser();
 
                     user.setUsername(usernametxt);
                     user.setPassword(passwordtxt);
                     user.setEmail(emailtxt);
 
-//                    ParseUser user = new ParseUser();
-//                    user.setUsername("amiti");
-//                    user.setPassword("password");
-//                    user.setEmail("amiti@gmail.com");
 
-// other fields can be set just like with ParseObject
-                   // user.put("phone", "650-253-0000");
-                    user.signUpInBackground(new SignUpCallback() {
-                        @Override
-                        public void done(com.parse.ParseException e) {
-                            if(e==null)
-                            {
-                             //   Toast.makeText(getApplicationContext(),"signed UP",Toast.LENGTH_SHORT).show();
-                                directtoProfile();
-                            }
-                            else{
-                                Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
+
+
+
+
+
+                     final ParseUser finalquery=user;
+                     final ProgressDialog progressDialog=new ProgressDialog(this);
+                     progressDialog.setCancelable(false);
+                     progressDialog.setCanceledOnTouchOutside(false);
+                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                     progressDialog.setMessage("Please wait..");
+                     progressDialog.show();
+                     final ParseUser finaluser=user;
+                     new Thread(new Runnable() {
+                         @Override
+                         public void run() {
+                             finaluser.signUpInBackground(new SignUpCallback() {
+                                 @Override
+                                 public void done(com.parse.ParseException e) {
+
+
+                                     if(e==null)
+                                     {
+
+                                         BitmapDrawable bitmapDrawable=(BitmapDrawable)getResources().getDrawable(R.drawable.solid);
+                                         Bitmap bitmap= bitmapDrawable.getBitmap();
+
+                                         bitmap=cropToSquare(bitmap);
+                                         ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                                         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                                         byte[] bitmapdata = stream.toByteArray();
+                                         ParseFile parseFile=new ParseFile(bitmapdata);
+                                         parseFile.saveInBackground();
+                                         finaluser.put("photoprofile", parseFile);
+                                         finaluser.saveInBackground();
+                                         //   Toast.makeText(getApplicationContext(),"signed UP",Toast.LENGTH_SHORT).show();
+                                         directtoProfile();
+
+                                     }
+                                     else{
+                                         Toast.makeText(getApplicationContext(),"Error"+e.getCause().toString(),Toast.LENGTH_SHORT).show();
+                                     }
+                                     progressDialog.dismiss();
+
+                                 }
+                             });
+                         }
+                     }).start();
+
 
                 }
                 break;
@@ -116,25 +160,6 @@ public class Register extends Activity implements View.OnClickListener{
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         // Compress image to lower quality scale 1 - 100
 
-        Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.solid);
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-        byte[] image = stream.toByteArray();
-
-        // Create the ParseFile
-        ParseFile file = new ParseFile( "solid.jpeg", image);
-
-        file.saveInBackground(new SaveCallback() {
-            @Override
-            public void done(com.parse.ParseException e) {
-                if (e == null) {
-                    Toast.makeText(getApplicationContext(), "done", Toast.LENGTH_LONG).show();
-                } else
-                    Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
-
-            }
-        });
-
-        userDetails.put("profilephoto", file);
         userDetails.saveInBackground(new SaveCallback() {
             @Override
             public void done(com.parse.ParseException e) {
@@ -149,5 +174,19 @@ public class Register extends Activity implements View.OnClickListener{
         });
 
         //Toast.makeText(getApplicationContext(),user.getObjectId().toString(),Toast.LENGTH_LONG).show();
+    }
+
+    public  Bitmap cropToSquare(Bitmap bitmap){
+        int width  = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        int newWidth = (height > width) ? width : height;
+        int newHeight = (height > width)? height - ( height - width) : height;
+        int cropW = (width - height) / 2;
+        cropW = (cropW < 0)? 0: cropW;
+        int cropH = (height - width) / 2;
+        cropH = (cropH < 0)? 0: cropH;
+        Bitmap cropImg = Bitmap.createBitmap(bitmap, cropW, cropH, newWidth, newHeight);
+
+        return cropImg;
     }
 }

@@ -70,7 +70,7 @@ public class ParseOvalImageView extends ParseImageView {
         paint.setDither(true);
         canvas.drawARGB(0, 0, 0, 0);
         paint.setColor(Color.parseColor("#BAB399"));
-        RectF oval = new RectF(0, 0, 130, 150);
+        RectF oval = new RectF(0, 0, finalBitmap.getWidth(), finalBitmap.getWidth());
         canvas.drawOval(oval, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(finalBitmap, rect, oval, paint);

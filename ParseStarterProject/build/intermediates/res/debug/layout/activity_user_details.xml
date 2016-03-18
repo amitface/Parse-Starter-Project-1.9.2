@@ -9,13 +9,14 @@
 
 
 
-    <com.parse.starter.OvalImageView
+    <com.parse.starter.RoundedImageView
         android:id="@+id/imageView_round"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/ic_launcher"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+
         android:onClick="onClick"/>
 
 
@@ -23,20 +24,15 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/editText"
+        android:hint="Desciption"
         android:layout_below="@+id/imageView_round"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Desciption"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true" />
+
 
     <Button
         android:id="@+id/saveDetail"
@@ -51,4 +47,11 @@
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>
-<!-- From: file:/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/res/layout/activity_user_details.xml -->
+<!--<TextView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+<!--android:text="Desciption"-->
+<!--android:id="@+id/textView7"-->
+<!--android:layout_below="@+id/editText"-->
+<!--android:layout_centerHorizontal="true" />--><!-- From: file:/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/res/layout/activity_user_details.xml -->

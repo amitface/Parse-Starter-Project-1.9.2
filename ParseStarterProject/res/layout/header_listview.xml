@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:elevation="10dp"
+    android:orientation="vertical"
+
+          xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ImageView
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:id="@+id/imageView"
+    android:src="@drawable/solid"
+        android:layout_marginTop="10dp"
+    android:onClick="onClick"
+        android:layout_gravity="center_horizontal|top" />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_vertical"
+    android:text="user"
+        android:textColor="#909AAC"
+    android:id="@+id/user"
+    android:textSize="14sp"
+    android:textStyle="bold"
+   />
+    <Button
+   android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/editButton"
+    android:text="edit profile"
+        android:background="@drawable/buttonshape"
+    android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="50dp"
+    android:layout_gravity="center_horizontal"/>
+</LinearLayout>
+
+
+<!--<TableLayout-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:padding="10dp"-->
+    <!--android:elevation="5dp"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android" >-->
+    <!--<TableRow>-->
+        <!--<ImageView-->
+        <!--android:layout_width="75dp"-->
+        <!--android:layout_height="75dp"-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:src="@drawable/solid"-->
+        <!--android:layout_gravity="center_horizontal"-->
+
+        <!--android:onClick="onClick"-->
+        <!--android:layout_column="1" />-->
+        <!--<TableLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="50dp"-->
+           <!--android:dividerPadding="20dp"-->
+            <!--android:stretchColumns="15dp"-->
+            <!--android:layout_column="2">-->
+            <!--<TableRow-->
+
+                <!--android:layout_gravity="center">-->
+                <!--<TextView-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_column="1"-->
+                    <!--android:layout_marginLeft="1dp"-->
+                    <!--android:text="post"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:textColor="#A78677"-->
+                    <!--android:textDirection="ltr" />-->
+                <!--<TextView-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_column="3"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="#A78677"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:id="@+id/followingText"-->
+                    <!--android:text="following"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_column="5"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="#A78677"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:id="@+id/followersText"-->
+                    <!--android:text="follower"/>-->
+
+            <!--</TableRow>-->
+
+
+
+
+            <!--<TableRow-->
+                <!--android:layout_marginTop="5dp">-->
+
+                <!--<TextView-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_column="1"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:text="10"/>-->
+                <!--<TextView-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+
+                    <!--android:id="@+id/following"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:layout_column="3"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:text="5"/>-->
+                <!--<TextView-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_column="5"-->
+                    <!--android:id="@+id/followers"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:text="5"/>-->
+            <!--</TableRow>-->
+
+        <!--</TableLayout>-->
+    <!--</TableRow>-->
+    <!--<TableRow>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="user"-->
+            <!--android:id="@+id/user"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_column="1"/>-->
+        <!--<Button-->
+            <!--android:layout_column="2"-->
+            <!--android:id="@+id/editButton"-->
+            <!--android:text="edit profile"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_gravity="center_horizontal"/>-->
+    <!--</TableRow>-->
+    <!--<TableRow>-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_column="1"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:text="yoyp"/>-->
+    <!--</TableRow>-->
+<!--</TableLayout>-->

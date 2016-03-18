@@ -60,25 +60,6 @@ public class UserDetails extends Activity implements View.OnClickListener{
     EditText descriptiontxt=null;
     //
     Bitmap bitmap=null;
-//    private void dispatchTakePictureIntent() {
-//        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-//            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-//        }
-//    }
-
-
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-//            setPic();
-//            galleryAddPic();
-//           // Bundle extras = data.getExtras();
-//            //Bitmap imageBitmap = (Bitmap) extras.get("data");
-//            //mImageView.setImageBitmap(imageBitmap);
-//        }
-//    }
 
     private File createImageFile() throws IOException {
         // Create an image file name
@@ -182,22 +163,23 @@ public class UserDetails extends Activity implements View.OnClickListener{
                     //Log.d("score", "Retrieved " + list.get(0).getObjectId() + " scores");
                     descriptiontxt.setText(parseObject.getString("description"));
 
-                    ParseFile profilePhoto = (ParseFile) parseObject.get("profilephoto");
-                    profilePhoto.getDataInBackground(new GetDataCallback() {
-                        @Override
-                        public void done(byte[] bytes, com.parse.ParseException e) {
-                            if (e == null) {
-                                // data has the bytes for the resume
-                                bitmap = BitmapFactory
-                                        .decodeByteArray(
-                                                bytes, 0,
-                                                bytes.length);
-                                mImageView.setImageBitmap(bitmap);
-                            } else {
-                                // something went wrong
-                            }
-                        }
-                    });
+//                    ParseFile profilePhoto = (ParseFile) parseObject.get("profilephoto");
+//
+//                    profilePhoto.getDataInBackground(new GetDataCallback() {
+//                        @Override
+//                        public void done(byte[] bytes, com.parse.ParseException e) {
+//                            if (e == null) {
+//                                // data has the bytes for the resume
+//                                bitmap = BitmapFactory
+//                                        .decodeByteArray(
+//                                                bytes, 0,
+//                                                bytes.length);
+//                                mImageView.setImageBitmap(bitmap);
+//                            } else {
+//                                // something went wrong
+//                            }
+//                        }
+//                    });
 
                 } else {
                     Log.d("score", "Error: " + e.getMessage());
@@ -282,37 +264,6 @@ public class UserDetails extends Activity implements View.OnClickListener{
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
                  bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
 
-//                File destination = new File(Environment.getExternalStorageDirectory(),imgName);
-//                byte[] image = bytes.toByteArray();
-
-//                // Create the ParseFile
-//                ParseFile file = new ParseFile( imgName, image);
-//
-//                file.saveInBackground(new SaveCallback() {
-//                    @Override
-//                    public void done(com.parse.ParseException e) {
-//                        if (e == null) {
-//                            Toast.makeText(getApplicationContext(), "done", Toast.LENGTH_LONG).show();
-//                        } else
-//                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
-//
-//                    }
-//                });
-//
-//                query.put("pic", file);
-//                query.put("userId", currentUser.getObjectId().toString());
-//                galleryAddPic();
-//                FileOutputStream fo;
-//                try {
-//                    destination.createNewFile();
-//                    fo = new FileOutputStream(destination);
-//                    fo.write(bytes.toByteArray());
-//                    fo.close();
-//                } catch (FileNotFoundException e) {
-//                    e.printStackTrace();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
                 mImageView.setImageBitmap( bitmap);
 
             } else if (requestCode == SELECT_FILE) {
@@ -345,40 +296,11 @@ public class UserDetails extends Activity implements View.OnClickListener{
                  bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
 
 
-//                byte[] image = bytes.toByteArray();
-//                // Create the ParseFile
-//                ParseFile file = new ParseFile(imgName , image);
-//
-//                file.saveInBackground(new SaveCallback() {
-//                    @Override
-//                    public void done(com.parse.ParseException e) {
-//                        if (e == null) {
-//                            Toast.makeText(getApplicationContext(), "done", Toast.LENGTH_LONG).show();
-//                        } else
-//                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
-//
-//                    }
-//                });
-
-//                query.put("pic", file);
-//                query.put("userId", currentUser.getObjectId().toString());
 
                 mImageView.setImageBitmap( bitmap);
             }
 
         }
-//        query.saveInBackground(new SaveCallback() {
-//            @Override
-//            public void done(com.parse.ParseException e) {
-//                if(e==null)
-//                {
-//                    Toast.makeText(getApplicationContext(),"done",Toast.LENGTH_LONG).show();
-//                }
-//                else
-//                    Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
-//
-//            }
-//        });
     }
 
 

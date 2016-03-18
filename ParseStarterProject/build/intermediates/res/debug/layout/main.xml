@@ -1,68 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#141617"
     android:padding="10dp">
 
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/username" />
+
     <EditText
         android:id="@+id/name"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="name"
-
+        android:backgroundTintMode="multiply"
+        android:layout_margin="10dp"
+        android:textColor="#4E4E50"
+        android:textColorHint="#4E4E50"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/username"
-        android:layout_toEndOf="@+id/username" />
-    <TextView
-        android:id="@+id/password"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/password"
-        android:layout_below="@+id/username"/>
+        android:layout_toEndOf="@+id/username"
+        android:backgroundTint="#6847ea" />
+
     <EditText
         android:id="@+id/pass"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="password"
         android:password="true"
+        android:backgroundTintMode="multiply"
+        android:layout_margin="10dp"
+        android:textColor="#4E4E50"
+        android:textColorHint="#4E4E50"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="2dp"
         android:layout_below="@+id/name"
-        android:layout_toRightOf="@+id/password"/>
+        android:layout_toRightOf="@+id/password"
+        android:backgroundTint="#6847ea" />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/submit"
-        android:text="@string/submit"
+        android:text="@string/login"
         android:onClick="onClick"
-        android:layout_alignTop="@+id/cancel"
-        android:layout_toLeftOf="@+id/cancel"
-        android:layout_toStartOf="@+id/cancel" />
+        android:background="#4D5055"
+        android:textColor="#96999A"
+        android:layout_margin="10dp"
+         />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register"
+        android:text="@string/register"
+        android:onClick="onClick"
+        android:background="#4D5055"
+        android:textColor="#96999A"
+        android:layout_margin="10dp"
+         />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cancel"
         android:text="@string/cancel"
         android:onClick="onClick"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/pass"
-        android:layout_toLeftOf="@+id/register"
-        android:layout_toStartOf="@+id/register" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/register"
-        android:text="@string/register"
-        android:onClick="onClick"
-        android:layout_alignTop="@+id/cancel"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-</RelativeLayout><!-- From: file:/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/res/layout/main.xml -->
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        />
+</LinearLayout><!-- From: file:/home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/ParseStarterProject/res/layout/main.xml -->

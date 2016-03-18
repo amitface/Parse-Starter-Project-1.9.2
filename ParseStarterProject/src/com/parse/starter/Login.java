@@ -1,6 +1,7 @@
 package com.parse.starter;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.ParseException;
 import android.os.Bundle;
@@ -56,32 +57,6 @@ public class Login extends Activity implements View.OnClickListener{
 			startActivity(intent);
 		}// Always call the superclass method first
 
-		// Activity being restarted from stopped state
-//		password=(EditText)findViewById(id.pass);
-//		username=(EditText)findViewById(id.name);
-//
-//		usernametxt=username.getText().toString();
-//		passwordtxt=password.getText().toString();
-//		final Intent intentHome = new Intent(this, Home.class);
-//		Toast.makeText(this,usernametxt+" "+passwordtxt,Toast.LENGTH_LONG).show();
-//		if(!usernametxt.isEmpty() && !passwordtxt.isEmpty())
-//		{
-//
-//			ParseUser.logInInBackground(usernametxt, passwordtxt, new LogInCallback() {
-//				@Override
-//				public void done(ParseUser parseUser, com.parse.ParseException e) {
-//					if (parseUser != null) {
-//						// Hooray! The user is logged in.
-//						startActivity(intentHome);
-//					} else {
-//						// Signup failed. Look at the ParseException to see what happened.
-//						Toast.makeText(Login.this, "Wrong UserName or Password", Toast.LENGTH_SHORT).show();
-//					}
-//				}
-//
-//
-//			});
-//		}
 	}
 
 	@Override
@@ -97,23 +72,36 @@ public class Login extends Activity implements View.OnClickListener{
 				usernametxt=username.getText().toString();
 				passwordtxt=password.getText().toString();
                 final Intent intentHome = new Intent(this, Home.class);
-				ParseUser.logInInBackground(usernametxt, passwordtxt, new LogInCallback() {
+				final ProgressDialog progressDialog=new ProgressDialog(this);
+				progressDialog.setCancelable(false);
+				progressDialog.setCanceledOnTouchOutside(false);
+				progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+				progressDialog.setMessage("Please wait..");
+				progressDialog.show();
+				new Thread(new Runnable() {
 					@Override
-					public void done(ParseUser parseUser, com.parse.ParseException e) {
-						if (parseUser != null) {
-							// Hooray! The user is logged in.
-							startActivity(intentHome);
-						} else {
-							// Signup failed. Look at the ParseException to see what happened.
-							Toast.makeText(Login.this,"Wrong UserName or Password",Toast.LENGTH_SHORT).show();
-						}
+					public void run() {
+						ParseUser.logInInBackground(usernametxt, passwordtxt, new LogInCallback() {
+							@Override
+							public void done(ParseUser parseUser, com.parse.ParseException e) {
+
+								progressDialog.dismiss();
+								if (parseUser != null) {
+									// Hooray! The user is logged in.
+
+									startActivity(intentHome);
+								} else {
+									// Signup failed. Look at the ParseException to see what happened.
+
+									Toast.makeText(Login.this,"Wrong UserName or Password",Toast.LENGTH_SHORT).show();
+								}
+
+							}
+
+
+						});
 					}
-
-
-				});
-
-
-
+				}).start();
 
                 break;
 			case id.cancel:
@@ -132,8 +120,12 @@ public class Login extends Activity implements View.OnClickListener{
 	}
 
 	@Override
-	public void onBackPressed() {
-		super.onBackPressed();
-		this.finish();
+	public boolean onKeyDown(int keyCode, KeyEvent event)
+	{
+		if ((keyCode == KeyEvent.KEYCODE_BACK))
+		{
+			finish();
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 }

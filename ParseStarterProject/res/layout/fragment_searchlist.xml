@@ -3,14 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+<SearchView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:commitIcon="@drawable/ic_search_white_24dp"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    android:onClick="onClick"
+    android:layout_margin="10dp"
+
+
+    android:id="@+id/searchView"
+    android:paddingLeft="10dp"
+    android:searchIcon="@drawable/ic_search_white_24dp"
+    android:background="#c295c0fc" />
+
+
 
 <ListView
     android:layout_width="match_parent"
-    android:layout_height="0dp"
+    android:layout_height="match_parent"
 
     android:id="@android:id/list"
     android:layout_gravity="center_vertical"
-    android:layout_weight="9" />
 
+    android:clickable="true"
+    android:background="#fafdfd" />
+    <TextView android:id="@id/android:empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Wait"/>
 
 </LinearLayout>

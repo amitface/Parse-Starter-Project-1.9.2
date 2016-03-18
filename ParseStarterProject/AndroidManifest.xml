@@ -3,11 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.parse.starter"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="9"
-
+        android:minSdkVersion="11"
         tools:overrideLibrary="android.support.v13" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -25,25 +24,21 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.parse.starter.permission.C2D_MESSAGE" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"        
-         />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        />
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:name=".ParseApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/rategram"
         android:label="@string/app_name"
         android:screenOrientation="locked"
-        android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar" >
+        android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
         <meta-data
             android:name="com.parse.APPLICATION_ID"
             android:value="@string/parse_app_id" />
@@ -53,16 +48,11 @@
 
         <activity
             android:name=".Home"
-            android:label="@string/title_activity_home"
-
-             >
-
-        </activity>
+            android:label="@string/title_activity_home" />
         <activity
             android:name=".Login"
             android:label="@string/app_name"
-            android:noHistory="true"
-             >
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -71,14 +61,13 @@
         </activity>
         <activity
             android:name=".Register"
-            android:label="@string/title_activity_register" >
-        </activity>
+            android:label="@string/title_activity_register" />
 
         <service android:name="com.parse.PushService" />
 
         <receiver
             android:name="com.parse.ParsePushBroadcastReceiver"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.parse.push.intent.RECEIVE" />
                 <action android:name="com.parse.push.intent.DELETE" />
@@ -87,18 +76,33 @@
         </receiver>
         <receiver
             android:name="com.parse.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-<!--                   IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
                 <category android:name="com.parse.starter" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".UserDetails" >
-        </activity>
+        <activity android:name=".UserDetails" />
+        <activity
+            android:name=".followers"
+            android:label="followers" />
+        <activity
+            android:name=".following"
+            android:label="following" />
+        <activity
+            android:name=".Search"
+            android:icon="@drawable/ic_undo_white_36dp"
+            android:label="@string/title_activity_search" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

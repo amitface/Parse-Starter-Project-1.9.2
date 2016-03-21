@@ -37,9 +37,11 @@
         android:layout_below="@+id/name"
         android:layout_toRightOf="@+id/password"
         android:backgroundTint="#6847ea" />
+
+
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/submit"
         android:text="@string/login"
         android:onClick="onClick"
@@ -48,11 +50,15 @@
         android:layout_margin="10dp"
          />
 
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/register"
         android:text="@string/register"
         android:onClick="onClick"

@@ -6,15 +6,17 @@
     android:dividerPadding="0dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:gravity="center_horizontal"
-    >
+    android:divider="#ffffff"
+    android:showDividers="none">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:padding="2dp"
         android:background="#ffffff">
 
-        <com.parse.starter.ParseOvalImageView
+        <com.parse.snapstar.ParseOvalImageView
             android:id="@+id/imageView_round"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -32,15 +34,26 @@
             android:text="user"
             android:layout_toEndOf="@+id/imageView_round"
             android:layout_toRightOf="@+id/imageView_round"
-            android:textColor="#83cdc3"
+            android:textColor="@color/textColor"
             android:paddingTop="5dp" />
 
+
     </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            />
+    </FrameLayout>
+
 
     <FrameLayout
         android:id="@+id/fm"
         android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
+
         android:background="#0ef5f9f9"
         android:layout_height="340dp">
 
@@ -54,18 +67,28 @@
 
     </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            />
+    </FrameLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
+        android:paddingRight="5dp"
         android:background="#ffffff">
         <ImageButton
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:id="@+id/imageButton"
             android:background="@drawable/index"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
              />
 
         <TextView
@@ -74,7 +97,7 @@
             android:id="@+id/rating"
             android:text="0.0"
             android:textSize="30sp"
-            android:textColor="#6f00ff"
+            android:textColor="@color/secondarytextColor"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/imageButton"
             android:layout_marginRight="20dp"
@@ -82,6 +105,8 @@
             />
 
     </RelativeLayout>
+
+
 </LinearLayout>
 <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
     <!--android:layout_width="match_parent"-->

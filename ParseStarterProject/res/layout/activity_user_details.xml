@@ -5,11 +5,11 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.parse.starter.UserDetails">
+    tools:context="com.parse.snapstar.UserDetails">
 
 
 
-    <com.parse.starter.RoundedImageView
+    <com.parse.snapstar.RoundedImageView
         android:id="@+id/imageView_round"
         android:layout_width="100dp"
         android:layout_height="100dp"

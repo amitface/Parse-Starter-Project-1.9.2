@@ -3,16 +3,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#bf8bf5">
+    android:background="#000000">
 
     <android.support.v4.view.ViewPager
-        android:background="@android:color/background_light"
+        android:background="#ffffff"
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
-
-        tools:context="com.parse.starter.Home" />
+        tools:context="com.parse.snapstar.Home" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

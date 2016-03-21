@@ -10,6 +10,8 @@
         android:layout_height="match_parent"
         android:id="@android:id/list"
         android:layout_gravity="center_vertical"
-        android:layout_weight="1" />
+        android:divider="#ffffff"
+        android:layout_weight="1"
+        android:dividerHeight="0dp" />
 
 </android.support.v4.widget.SwipeRefreshLayout>

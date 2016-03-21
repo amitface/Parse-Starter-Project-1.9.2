@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.parse'
 
+
 buildscript {
     repositories {
         mavenCentral()
@@ -8,6 +9,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.parse.tools:gradle:1.+'
+
     }
 }
 
@@ -15,14 +17,19 @@ dependencies {
     compile fileTree(dir: 'libs', include: 'Parse-*.jar')
     compile fileTree(dir: 'libs', include: 'ParseCrashReporting-*.jar')
     compile 'com.parse.bolts:bolts-android:1.2.0'
-    compile 'com.android.support:support-v13:23.1.1'
-    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:support-v13:24.0.0-alpha1'
+    compile 'com.android.support:support-v4:24.0.0-alpha1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services-identity:8.4.0'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
 }
+
+
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
-
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -36,6 +43,8 @@ android {
             assets.srcDirs = ['src/main/assets', 'src/main/res/']
         }
     }
+
+
 }
 
 /* Uncomment if you enable ProGuard and you want to automatically upload symbols on build.

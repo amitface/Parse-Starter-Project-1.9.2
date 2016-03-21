@@ -7,7 +7,7 @@
 
 
 
-    <com.parse.starter.ParseOvalImageView
+    <com.parse.snapstar.ParseOvalImageView
         android:id="@+id/imageView_round"
         android:layout_width="50dp"
         android:layout_height="50dp"

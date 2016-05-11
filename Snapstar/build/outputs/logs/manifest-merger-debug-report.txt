@@ -1,0 +1,251 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:2:1-121:12
+	xmlns:tools
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:2:11-69
+	package
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:4:5-33
+	android:versionName
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:6:5-32
+		INJECTED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml
+		INJECTED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:5:5-30
+		INJECTED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml
+		INJECTED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml
+uses-sdk
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:8:5-10:55
+MERGED from [com.android.support:support-v13:24.0.0-alpha2] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/support-v13/24.0.0-alpha2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha2/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha2/AndroidManifest.xml:20:5-43
+MERGED from [com.facebook.android:facebook-android-sdk:4.9.0] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.9.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:multidex:1.0.1] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha2/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:23.3.0] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.parse:parsefacebookutils-v4-android:1.10.3] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.parse/parsefacebookutils-v4-android/1.10.3/AndroidManifest.xml:16:5-18:41
+	android:targetSdkVersion
+		INJECTED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml
+		INJECTED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:9:9-35
+		INJECTED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml
+		INJECTED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:10:9-52
+uses-permission#android.permission.INTERNET
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:12:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:13:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:14:22-65
+uses-permission#android.permission.VIBRATE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:15:5-66
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:15:22-63
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:16:5-71
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:16:22-68
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:18:5-82
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:18:22-79
+permission#com.parse.snapstar.permission.C2D_MESSAGE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:24:5-26:47
+	android:protectionLevel
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:26:9-44
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:25:9-65
+uses-permission#com.parse.starter.permission.C2D_MESSAGE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:28:5-80
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:28:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:29:5-81
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:29:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:30:5-75
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:30:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:31:5-80
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:31:22-77
+uses-feature#android.hardware.camera
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:33:5-35:35
+	android:required
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:35:9-32
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:34:9-47
+application
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:37:5-119:19
+MERGED from [com.android.support:support-v13:24.0.0-alpha2] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/support-v13/24.0.0-alpha2/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha2/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha2/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.android:facebook-android-sdk:4.9.0] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.9.0/AndroidManifest.xml:28:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha2/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:23.3.0] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.parse:parsefacebookutils-v4-android:1.10.3] /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/build/intermediates/exploded-aar/com.parse/parsefacebookutils-v4-android/1.10.3/AndroidManifest.xml:20:5-20
+	android:screenOrientation
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:42:9-43
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:41:9-41
+	android:allowBackup
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:39:9-35
+	android:icon
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:40:9-42
+	android:theme
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:43:9-42
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:38:9-41
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:44:9-107
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:44:20-65
+	android:value
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:44:66-105
+meta-data#com.google.android.gms.version
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:46:9-47:69
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:46:20-65
+	android:value
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:47:13-66
+meta-data#com.parse.APPLICATION_ID
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:49:9-51:52
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:50:13-52
+	android:value
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:51:13-49
+meta-data#com.parse.CLIENT_KEY
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:52:9-54:56
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:53:13-48
+	android:value
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:54:13-53
+activity#com.parse.snapstar.Home
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:56:9-58:59
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:58:13-56
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:57:13-33
+activity#com.parse.snapstar.Login
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:59:9-68:20
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:61:13-45
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:60:13-34
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:63:13-67:29
+action#android.intent.action.MAIN
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:64:17-69
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:64:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:66:17-77
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:66:27-74
+activity#com.parse.snapstar.Register
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:69:9-71:63
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:71:13-60
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:70:13-37
+service#com.parse.PushService
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:73:9-57
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:73:18-54
+receiver#com.parse.ParsePushBroadcastReceiver
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:75:9-83:20
+	android:exported
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:77:13-37
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:76:13-64
+intent-filter#com.parse.push.intent.DELETE+com.parse.push.intent.OPEN+com.parse.push.intent.RECEIVE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:78:13-82:29
+action#com.parse.push.intent.RECEIVE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:79:17-72
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:79:25-69
+action#com.parse.push.intent.DELETE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:80:17-71
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:80:25-68
+action#com.parse.push.intent.OPEN
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:81:17-69
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:81:25-66
+receiver#com.parse.GcmBroadcastReceiver
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:84:9-94:20
+	android:permission
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:86:13-73
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:85:13-58
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+com.parse.starter
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:87:13-93:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:88:17-81
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:88:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:89:17-86
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:89:25-83
+category#com.parse.starter
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:92:17-62
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:92:27-59
+activity#com.parse.snapstar.UserDetails
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:96:9-49
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:96:19-46
+activity#com.parse.snapstar.followers
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:97:9-99:41
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:99:13-38
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:98:13-38
+activity#com.parse.snapstar.following
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:100:9-102:41
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:102:13-38
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:101:13-38
+activity#com.parse.snapstar.Search
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:103:9-106:61
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:106:13-58
+	android:icon
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:105:13-56
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:104:13-35
+activity#com.parse.snapstar.ProfileActivity
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:108:9-110:62
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:110:13-59
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:109:13-44
+activity#com.parse.snapstar.SettingsActivity
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:111:9-113:72
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:113:13-60
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:112:13-45
+activity#com.facebook.FacebookActivity
+ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:114:9-118:48
+	android:label
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:118:13-45
+	android:configChanges
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:115:13-113
+	android:theme
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:117:13-72
+	android:name
+		ADDED from /home/amit/AndroidStudioProjects/Parse-Starter-Project-1.9.2/Snapstar/AndroidManifest.xml:114:19-63

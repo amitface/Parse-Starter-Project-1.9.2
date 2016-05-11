@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "redBackground">#C60202</color>
+    <color name = "colorDivider">#5ADADBF2</color>
+
+    <color name = "homeBackground"> #607D8B</color>
+
+
+
+    <color name = "textColor">#909AAC</color>
+    <color name = "secondarytextColor">#727272</color>
+
+    <color name="blue_grey_900">#ffffff</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background">#fafdfd</color>
+
+    <color name="primary">#5A56FA</color>
+    <color name="primary_dark">#4F29DB</color>
+    <color name="accent">#C7D1FD</color>
+
+
+
+
+</resources>

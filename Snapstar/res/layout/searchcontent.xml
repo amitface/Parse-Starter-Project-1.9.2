@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+
+    android:layout_margin="5dp">
+
+
+    <com.parse.snapstar.ParseOvalImageView
+        android:id="@+id/imageView_round"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/solid"
+        android:onClick="onClick"
+        android:layout_marginLeft="15dp"
+
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+
+         />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imageView_round"
+        android:textColor="@color/textColor" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/buttonstate"
+        android:text="follow"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        android:id="@+id/button"
+        android:onClick="onClick"
+        android:elevation="2dp"
+        android:stateListAnimator="@android:anim/cycle_interpolator"
+
+        android:textColor="#ffffff"
+       android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp"
+        android:focusable="false"
+        android:shadowColor="#620505" />
+</RelativeLayout>

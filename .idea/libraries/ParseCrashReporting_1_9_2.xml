@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="ParseCrashReporting-1.9.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Snapstar/libs/ParseCrashReporting-1.9.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
